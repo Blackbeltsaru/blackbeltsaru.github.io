@@ -3383,6 +3383,40 @@ input, select, textarea {
 
 		}
 
+/* Resume */
+	#resume {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+	}
+		#resume .timeframe {
+			-moz-flex-grow: 1;
+			-webkit-flex-grow: 1;
+			-ms-flex-grow: 1;
+			flex-grow: 1;
+			-moz-flex-shrink: 1;
+			-webkit-flex-shrink: 1;
+			-ms-flex-shrink: 1;
+			flex-shrink: 1;
+			width: 25%
+		}
+
+		#resume .details {
+
+			-moz-flex-grow: 3;
+			-webkit-flex-grow: 3;
+			-ms-flex-grow: 3;
+			flex-grow: 3;
+			-moz-flex-shrink: 3;
+			-webkit-flex-shrink: 3;
+			-ms-flex-shrink: 3;
+			flex-shrink: 3;
+			display: block;
+			margin: 0 0 2em 4em;
+			width: 75%
+		}
+
 /* Banner */
 
 	#banner {
