@@ -5,7 +5,18 @@ import CorvusMouseButton from './Corvus/Core/MosueButtonCodes.js';
 import WindowAnimator from './test/renderer/WindowContext.js';
 
 
-const CApplication = Application;
-const Corvus = EntryPoint;
-const CKey = CorvusKey;
-const CMouseButton = CorvusMouseButton;
+class Sandbox extends Application {
+    constructor() {
+        super();
+    }
+
+    static createApplication() {
+        return new Sandbox();
+    }
+}
+
+const runSandbox = () => {
+    Corvus(Sandbox);
+}
+
+runSandbox();
