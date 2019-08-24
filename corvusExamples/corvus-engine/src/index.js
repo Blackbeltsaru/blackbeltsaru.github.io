@@ -13,6 +13,10 @@ class Sandbox extends Application {
     static createApplication() {
         return new Sandbox();
     }
+
+    getTitle() {return "Corvus Example";}
+    getWindowHeight() {return 380;}
+    getWindowHeight() {return 640;}
 }
 
 const runSandbox = () => {
