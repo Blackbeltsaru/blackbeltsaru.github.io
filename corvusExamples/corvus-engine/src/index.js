@@ -16,7 +16,7 @@ class Sandbox extends Application {
 
     getTitle() {return "Corvus Example";}
     getWindowHeight() {return 380;}
-    getWindowHeight() {return 640;}
+    getWindowWidth() {return 640;}
 }
 
 const runSandbox = () => {
