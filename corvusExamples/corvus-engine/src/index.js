@@ -4,10 +4,8 @@ import CorvusKey from './Corvus/Core/KeyCodes.js';
 import CorvusMouseButton from './Corvus/Core/MosueButtonCodes.js';
 import WindowAnimator from './test/renderer/WindowContext.js';
 
-module.exports = {
-    Application: Application,
-    Corvus: EntryPoint,
-    CorvusKey,
-    CorvusMouseButton,
-    WindowAnimator
-}
+
+const Application = Application;
+const Corvus = EntryPoint;
+const CorvusKey = CorvusKey;
+const CorvusMouseButton = CorvusMouseButton;
