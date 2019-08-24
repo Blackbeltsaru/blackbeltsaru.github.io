@@ -6,7 +6,7 @@ import NotImplementedError from '../Error/NotImplementedError.js';
 import { WindowProps } from '../Window/Window.js';
 import LayerStack from '../Layer/LayerStack.js';
 import Input from '../Input/Input.js';
-import Shader from '../Shader/Shader'
+import Shader from '../Shader/Shader.js';
 
 //This returns a bit field with the x+1th bit on
 //This can be used for bitwise operations 
