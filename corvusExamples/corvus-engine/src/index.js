@@ -16,7 +16,7 @@ class Sandbox extends Application {
 }
 
 const runSandbox = () => {
-    Corvus(Sandbox);
+    EntryPoint(Sandbox);
 }
 
 runSandbox();
