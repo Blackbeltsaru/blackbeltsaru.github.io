@@ -1,5 +1,5 @@
 import NotImplementedError from '../Error/NotImplementedError.js';
-import Key from './Key'
+import Key from './Key.js'
 
 class Input {
 
