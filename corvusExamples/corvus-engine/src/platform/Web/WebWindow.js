@@ -1,10 +1,10 @@
-import {Window} from '../../Corvus/Window/Window';
-import CorvusLogger from '../../Corvus/Logger/CorvusLogger';
-import {KeyPressedEvent, KeyReleasedEvent} from '../../Corvus/Events/KeyboardEvent';
-import {MousePressedEvent, MouseReleasedEvent, MouseScrolledEvent, MouseMovedEvent} from '../../Corvus/Events/MouseEvent';
-import Input from '../../Corvus/Input/Input';
-import WebInput from './WebInput';
-import WebGLContext from '../WebGL/WebGLContext';
+import {Window} from '../../Corvus/Window/Window.js';
+import CorvusLogger from '../../Corvus/Logger/CorvusLogger.js';
+import {KeyPressedEvent, KeyReleasedEvent} from '../../Corvus/Events/KeyboardEvent.js';
+import {MousePressedEvent, MouseReleasedEvent, MouseScrolledEvent, MouseMovedEvent} from '../../Corvus/Events/MouseEvent.js';
+import Input from '../../Corvus/Input/Input.js';
+import WebInput from './WebInput.js';
+import WebGLContext from '../WebGL/WebGLContext.js';
 
 /** A helper "class" to create window data */
 const WindowData = (title, width, height, vSync, eventCallback) => ({title, width, height, vSync, eventCallback});

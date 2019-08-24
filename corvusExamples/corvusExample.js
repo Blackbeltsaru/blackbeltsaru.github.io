@@ -1,5 +1,3 @@
-import {Corvus, Application} from 'corvus-engine';
-
 class Sandbox extends Application {
     constructor() {
         super();

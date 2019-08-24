@@ -1,4 +1,4 @@
-import {NotImplementedError} from '../Error/NotImplementedError';
+import {NotImplementedError} from '../Error/NotImplementedError.js';
 
 class Layer {
 

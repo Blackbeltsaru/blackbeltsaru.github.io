@@ -1,11 +1,11 @@
-import CorvusLogger from '../Logger/CorvusLogger';
-import WebWindow from '../../platform/Web/WebWindow';
-import { EventDispatcher } from '../Events/Events';
-import { WindowCloseEvent } from '../Events/ApplicationEvent'
-import NotImplementedError from '../Error/NotImplementedError';
-import { WindowProps } from '../Window/Window';
-import LayerStack from '../Layer/LayerStack';
-import Input from '../Input/Input';
+import CorvusLogger from '../Logger/CorvusLogger.js';
+import WebWindow from '../../platform/Web/WebWindow.js';
+import { EventDispatcher } from '../Events/Events.js';
+import { WindowCloseEvent } from '../Events/ApplicationEvent.js';
+import NotImplementedError from '../Error/NotImplementedError.js';
+import { WindowProps } from '../Window/Window.js';
+import LayerStack from '../Layer/LayerStack.js';
+import Input from '../Input/Input.js';
 import Shader from '../Shader/Shader'
 
 //This returns a bit field with the x+1th bit on

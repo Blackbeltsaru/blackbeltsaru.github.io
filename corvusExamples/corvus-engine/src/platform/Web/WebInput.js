@@ -1,4 +1,4 @@
-import Input from '../../Corvus/Input/Input';
+import Input from '../../Corvus/Input/Input.js';
 
 class WebInput extends Input {
 

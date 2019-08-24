@@ -1,4 +1,4 @@
-import {Event, Events, EventCategories} from './Events';
+import {Event, Events, EventCategories} from './Events.js';
 
 /**
  * An event to represent that the window has been resized

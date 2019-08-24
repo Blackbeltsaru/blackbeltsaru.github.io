@@ -1,5 +1,5 @@
-import {BIT} from '../Core/Application';
-import NotImplementedError from '../Error/NotImplementedError';
+import {BIT} from '../Core/Application.js';
+import NotImplementedError from '../Error/NotImplementedError.js';
 
 /**
  * An enum to represent the different types of events that exist

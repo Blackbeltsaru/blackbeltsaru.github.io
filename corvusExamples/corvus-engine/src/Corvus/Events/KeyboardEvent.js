@@ -1,4 +1,4 @@
-import {Event, Events, EventCategories} from './Events';
+import {Event, Events, EventCategories} from './Events.js';
 
 export class KeyEvent extends Event {
 
