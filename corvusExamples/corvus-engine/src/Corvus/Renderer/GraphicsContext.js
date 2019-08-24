@@ -1,5 +1,5 @@
-import CorvusLogger from "../Logger/CorvusLogger.js";
-import NotImplementedError from "../Error/NotImplementedError.js";
+import CorvusLogger from '../Logger/CorvusLogger.js';
+import NotImplementedError from '../Error/NotImplementedError.js';
 
 
 class GraphicsContext {

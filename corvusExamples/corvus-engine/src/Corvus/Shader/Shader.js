@@ -1,4 +1,4 @@
-import CorvusLogger from "../Logger/CorvusLogger.js";
+import CorvusLogger from '../Logger/CorvusLogger.js';
 
 class Shader {
 
