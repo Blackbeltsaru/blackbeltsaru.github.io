@@ -1,4 +1,4 @@
-class Sandbox extends Application {
+class Sandbox extends CApplication {
     constructor() {
         super();
     }
