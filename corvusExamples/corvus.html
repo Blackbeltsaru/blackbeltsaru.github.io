@@ -38,24 +38,80 @@
 					<canvas id="canvas" class="corvus"></canvas>
 					<script type="module" src="./corvus-engine/src/index.js"></script>
 
-					<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque
-						venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim
-						auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque
-						in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar
-						mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque
-						enim turpis, hendrerit.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class
-						aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam
-						tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc
-						ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non,
-						bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus.
-						Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In
-						non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
+					<p>Corvus Engine is being built as an excersize in learning game engine architecture. The main goal
+						was originally to understand the graphics pipeline. That has since extended to understand how
+						all of the pieces of a game engine communicate. Additionally, I am building Corvus Engine to give myself 
+						a platform to implement new projects. I often find myself wanting to implement projects that 
+						require visualizations. Up until this point I have been using frameworks that allow for easy 
+						visual development such as <a href="https://p5js.org/">p5.js</a> or <a href="https://love2d.org/">
+						LÖVE</a>. However, I am the kind of person who would prefer write all of the code from scratch 
+						rather than use libraries or frameworks.
 					</p>
-					<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor
-						imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet.
-						Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at,
-						elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+					<p>I am frequently asked; "Why are you writing a game egine in Javascript?", and the answer is quite simple.
+						I intend this project to be a learning experience, therefore, I find myself referencing many resources 
+						and tutorials throughout the development process. Many of these resources are specifically written for 
+						C/C++ development. I believe that following a tutorial and copying the code directly does not lead 
+						to understanding. Additionally, by using Javascript I have easy access to the graphics library WebGL, 
+						which allows me to practice working in the graphics pipeline. All of these points have lead me to choose 
+						to develop in Javascript. I do have plans to take what I learn through this process and build Corvus 
+						Engine in C/C++, but that is a future project. 
+					</p>
+
+					<hr class="major"/>
+
+					<h2>Current Features</h2>
+
+					<h3>Logging</h3>
+					<p>Corvus Engine has a nearly complete logging solution with both a core and a client logger. The 
+						core logger is used to log messages from inside the engine iteself, while the client logger 
+						is used to allow a client implementing Corvus Engine to access all of the logging features. 
+					<br>
+					<br>
+						Corvus Engine's logger has the following log levels: <br>
+						<blockquote>
+							&#8226; <b>TRACE</b> <br>
+							&#8226; <b>DEBUG</b> <br>
+							&#8226; <b>INFO </b> <br>
+							&#8226; <b>WARN </b> <br>
+							&#8226; <b>ERROR</b> <br>
+							&#8226; <b>FATAL</b> <br>
+							Any message logged at FATAL will immediatly log a stack trace as well.<br>
+						</blockquote>
+					    The log level is configurable by the client. Any message logged at a level lower than the 
+						level configured by the client will be ignored. 
+					</p>
+
+					<h3>Eventing</h3>
+					<p>Corvus Engine's eventing structure is build to be easily expandable. When the window 
+						is built an event callback is registered. Every time the window fires an event, the 
+						callback is invoked with the event as a argument. This allows the window to function 
+						without needing any context about the rest of the engine. 
+						<br><br>
+						Corvus Engine implements its own event holders. This allows for straight forward 
+						platform migration. Read more about this at <a href="#platformIndependence">Platform Isolation</a>. 
+						These events belong to one or many event categories. For example a <b>Mouse Down</b> event belongs to 
+						the <b>Mouse Button</b>, <b>Mouse</b>, and <b>Input</b> categories. The purpose of event categories 
+						is to allow multiple event types to be caught by a single handler. 
+					</p>
+
+					<h3>Layers</h3>
+					<p>Corvus Engine implements Layers and a Layer Stack. Layers are how a client interacts with
+						Corvus Engine. A client will implement a Layer and push said Layer onto the applications 
+						Layer Stack. From that point on, the layer will recieve events, provided a Layer higher in 
+						the stack has not already handled the event, as well as update calls. I have opted not to 
+						force Layers to have a render call because there are situations in which the update logic 
+						and the render logic may be tied together. 
+					</p>
+
+					<h3 id="platformIndependence">Platform Isolation</h3>
+					<p>Corvus Engine is implemented in such a way that all of the platform specific logic is isolated
+						within those platform specific code sections. For example, Corvus Engine has its own event 
+						containers. When the browser fires an event, that event is caught and transformed into a Corvus 
+						specific event and propagated throughout the application. Similar isolation occurs with the window
+						and the rendering context. Therefore, if I wanted to allow Corvus Engine to be run headless, in 
+						Node for example, I would only have to implement a headless window and rendering context, rather 
+						than re-implement the entirety of the engine. 
+					</p>
 
 				</section>
 				<!-- End page specific information -->
@@ -75,14 +131,7 @@
 						<li><a href="../index.html">Home</a></li>
 						<li><a href="#">About Me</a></li>
 						<li><a href="#">Motion Capture</a></li>
-						<li>
-							<span class="opener">Corvus Engine Demos</span>
-							<ul>
-								<li><a href="#">Pong</a></li>
-								<li><a href="#">Breakout</a></li>
-								<li><a href="#">Sidescrolling Platformer</a></li>
-							</ul>
-						</li>
+						<li><a href="#Í">Corvus Engine</a></li>
 						<li>
 							<span class="opener">Toy Projects</span>
 							<ul>

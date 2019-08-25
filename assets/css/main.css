@@ -3429,7 +3429,8 @@ input, select, textarea {
 		margin-right: auto;
 		margin-top: 3em;
 		margin-bottom: 3em;
-		border: 3px solid #0f0f0f
+		border: 3px solid #0f0f0f;
+		outline: none;
 	}
 
 /* Resume */
