@@ -3425,8 +3425,10 @@ input, select, textarea {
 /* Corvus */
 	.corvus {
 		display: block;
-		margin: auto;
-		padding: 6em;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 3em;
+		margin-bottom: 3em;
 		border: 3px solid #0f0f0f
 	}
 
