@@ -3422,6 +3422,14 @@ input, select, textarea {
 
 		}
 
+/* Corvus */
+	.corvus {
+		display: block;
+		margin: auto;
+		padding: 6em;
+		border: 3px solid #0f0f0f
+	}
+
 /* Resume */
 	.resume {
 		display: -moz-flex;
